@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Rye';
+    src: url('../asset/fonts/Rye-Regular.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    border: 1px solid black;
+    font-family: 'Rye', sans-serif;
+    background: black;
+    color: white;
+    overflow: unset; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 350%;
+}
+
+h2 {
+    font-size: 250%;
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+}
+
+.partie-gauche, .partie-droite {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+}
+
+
+.partie-gauche {
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.separation {
+    border: none; /* Supprime la bordure par d�faut */
+    border-right: 5px solid white; /* Ajoute une bordure � droite */
+    height: 55%; /* Ajuste la hauteur de la barre */
+    margin: auto 0; /* Centre verticalement la barre */
+}
+
+.liste-centree {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par d�faut de la liste */
+    display: flex; /* Aligne les �l�ments de la liste horizontalement */
+    justify-content: space-around; /* Distribue l'espace autour des �l�ments de la liste de mani�re �gale */
+}
+
+    .liste-centree li {
+        font-size: 130%;
+        padding: 10px; /* Ajoute un peu d'espace au-dessus et en dessous de chaque �l�ment de la liste */
+        z-index: 1;
+    }
+
+.lottie-container {
+    width: 100%;
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+}
+
+@font-face {
+    font-family: 'Rye';
+    src: url('fonts/Rye-Regular.ttf') format('truetype');
+}
+
+.column.is-narrow {
+    position: relative;
+}
+
+.bulle-dialogue {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: white;
+    color: black;
+    border-radius: .4em;
+    padding: 1em;
+}
+
+    .bulle-dialogue:after {
+        content: '';
+        font-size: 150%;
+        color: white;
+        position: absolute;
+        top: 100%; /* Position de la fl�che */
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #00a8ff transparent;
+    }
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
