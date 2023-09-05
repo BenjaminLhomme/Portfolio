@@ -1,6 +1,6 @@
 <script>
     let images = [
-      {src: '../../asset/ajax.png', alt: 'ajax', title: 'Titre 1'},
+      {src: '$asset/ajax.png', alt: 'ajax', title: 'Titre 1'},
       {src: '../.../asset/github.png', alt: 'github', title: 'Titre 2'},
       {src: '../.../asset/boostrap.png', alt: 'boostrap', title: 'Titre 3'},
       {src: '../.../asset/aspnet.png', alt: 'aspnet', title: 'Titre 3'},
@@ -38,6 +38,10 @@
       return array;
     }
   </script>
+
+<style>
+  @import '../../style/languagesframeworks.css';
+</style>
   
   <h1>Galerie d'images</h1>
   

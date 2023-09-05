@@ -9,7 +9,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$components : 'src/lib',
-			$assets: 'src/assets'
+			$assets: 'src/asset'
 		} // Fermeture de l'objet 'alias'
 	} // Fermeture de l'objet 'kit'
 };

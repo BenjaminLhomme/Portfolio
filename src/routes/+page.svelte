@@ -28,10 +28,10 @@
         <h1>Lhomme Benjamin</h1>
         <h2>Développeur</h2>
         <ul class="liste-centree">
-            <li><a href="/competences/+page.svelte">Compétences</a></li>
-            <li><a href="./languagesframeworks/+page.svelte">Langages et Framework</a></li>
-            <li><a href="./portfolio/+page.svelte">Projets</a></li>
-        </ul>
+            <li><a href="/competences">Compétences</a></li>
+            <li><a href="/languagesframeworks">Langages et Framework</a></li>
+            <li><a href="/portfolio">Projets</a></li>
+        </ul>        
     </div>
 </div>
 <hr class="separation" />
