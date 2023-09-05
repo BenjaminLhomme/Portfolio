@@ -1,13 +1,9 @@
-// Chargement de l'animation Lottie
-lottie.loadAnimation({
-    container: document.getElementById('lottie-animation-1'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'https://assets5.lottiefiles.com/packages/lf20_6e0qqtpa.json' // Remplacez par l'URL de votre premi�re animation
-});
-
-particlesJS('particles-js',
+<script>
+    import { onMount } from 'svelte';
+    import particlesJS from 'particles.js';
+  
+    onMount(() => {
+        particlesJS('particles-js',
     {
         "particles": {
             "number": {
@@ -113,3 +109,9 @@ particlesJS('particles-js',
         },
         "retina_detect": true
     });
+
+    });
+  </script>
+  
+  <div id="particles-js"></div>
+  
