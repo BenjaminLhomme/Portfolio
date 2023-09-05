@@ -1,0 +1,93 @@
+body { 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.allCard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    width: 20%;
+    height: 80%;
+    background-color: blue;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 1s;
+}
+
+.card:hover {
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.001s;
+}
+
+.face1 {
+    backface-visibility: hidden;
+}
+
+.face2 {
+    transform: rotateY(180deg) translateZ(1px);
+    transform-style: preserve-3d;
+    visibility: hidden;
+}
+
+.card:hover .face1 {
+    transform: rotateY(180deg);
+
+}
+
+.card:hover .face2 {
+    transform: rotateY(360deg);
+}
+
+.card:hover .face2 .content {
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+
+.face2 .content {
+    transform: rotateY(180deg);
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}

@@ -2,9 +2,8 @@
     import { onMount } from 'svelte';
     import lottie from 'lottie-web';
 
-    let container: HTMLElement | null;
-
     onMount(() => {
+        const container = document.getElementById('lottie-animation-1');
         if (container) {
             lottie.loadAnimation({
                 container: container,

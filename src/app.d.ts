@@ -2,8 +2,9 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-		// interface PageData {}
-		// interface Platform {}
+		interface Window {
+			particlesJS: any;
+		}
 	}
 }
 

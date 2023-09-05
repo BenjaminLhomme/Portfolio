@@ -1,13 +1,9 @@
-<script lang="ts">
+<script>
     import { onMount } from 'svelte';
     import lottie from 'lottie-web';
-    import { initParticles, updateStats } from './ts';
+    import {Particles} from '$components';
 
     onMount(() => {
-        // Initialisation de particles.js
-        initParticles();
-        updateStats();
-
         // Chargement de l'animation Lottie
         const container = document.getElementById('lottie-animation-1');
         if (container) {
@@ -24,22 +20,17 @@
 
 <style>
     @import '../style/home.css';
-    @import './css/particles.css'; // Assurez-vous que le chemin est correct
 </style>
 
-<div id="particles-js"></div>
-<div class="count-particles">
-    <span class="js-count-particles">--</span> particles
-</div>
+<Particles />
 <div class="partie-gauche">
     <div class="centre">
         <h1>Lhomme Benjamin</h1>
         <h2>Développeur</h2>
         <ul class="liste-centree">
-            <li><a href="/competences">Compétences</a></li>
-            <li><a href="/langages-framework">Langages et Framework</a></li>
-            <li><a href="/projets">Projets</a></li>
-            <li><a href="/contacts">Contacts</a></li>
+            <li><a href="/competences/+page.svelte">Compétences</a></li>
+            <li><a href="./languagesframeworks/+page.svelte">Langages et Framework</a></li>
+            <li><a href="./portfolio/+page.svelte">Projets</a></li>
         </ul>
     </div>
 </div>
