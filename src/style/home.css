@@ -1,5 +1,7 @@
 body {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 100vh;
     border: 1px solid black;
@@ -9,31 +11,24 @@ body {
     overflow: unset; 
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 350%;
+    font-size: 450%;
+    margin-top: 5%;
 }
 
 h2 {
-    font-size: 250%;
-    display: flex;
-    justify-content: center;
+    font-size: 400%;
     margin: 10%;
 }
 
 .partie-gauche, .partie-droite {
-    width: 50%;
+    flex: 1;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center; /* Centre le contenu verticalement */
-}
-
-
-.partie-gauche {
-    border-right: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,28 +36,31 @@ h2 {
 }
 
 .separation {
-    border: none; /* Supprime la bordure par d�faut */
-    border-right: 5px solid white; /* Ajoute une bordure � droite */
-    height: 55%; /* Ajuste la hauteur de la barre */
-    margin: auto 0; /* Centre verticalement la barre */
+    width: 5px;
+    height: 55%;
+    background-color: white;
+    margin: auto;
 }
 
 .liste-centree {
-    list-style-type: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime le padding par d�faut de la liste */
-    display: flex; /* Aligne les �l�ments de la liste horizontalement */
-    justify-content: space-around; /* Distribue l'espace autour des �l�ments de la liste de mani�re �gale */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-    .liste-centree li {
-        font-size: 130%;
-        padding: 10px; /* Ajoute un peu d'espace au-dessus et en dessous de chaque �l�ment de la liste */
-        z-index: 1;
-    }
+.liste-centree li {
+    font-size: 120%;
+    margin-top: 3%;
+    z-index: 1;
+}
 
 .lottie-container {
+    margin-top: 5%;
     width: 100%;
-    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    height: 300px;
 }
 
 @font-face {
@@ -76,29 +74,92 @@ h2 {
 
 .bulle-dialogue {
     position: relative;
-    top: 0;
-    left: 0;
     background: white;
     color: black;
     border-radius: .4em;
     padding: 1em;
+    text-align: center;
 }
 
-    .bulle-dialogue:after {
-        content: '';
-        font-size: 150%;
-        color: white;
-        position: absolute;
-        top: 100%; /* Position de la fl�che */
-        left: 50%;
-        margin-left: -10px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent #00a8ff transparent;
-    }
+.bulle-dialogue:after {
+    content: '';
+    font-size: 1000px;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #00a8ff transparent;
+}
 
 #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+a:hover {
+    color: #00a8ff;
+}
+
+.lottie-container-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+}
+
+.lottie-phone, .lottie-mail, .lottie-linkedin {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    max-width: calc(33.33% - 2vw);
+}
+
+.lottie-text {
+    margin-left: 1vw;
+}
+
+@media (min-width: 769px) {
+    body {
+        flex-direction: row;
+    }
+
+    .lottie-container-contact {
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .lottie-container-contact {
+        order: 2;
+    }
+
+    .partie-gauche, .partie-droite {
+        flex-basis: 100%;
+    }
+
+    .separation {
+        width: 100%;
+        height: 5px;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+
+    h2 {
+        font-size: 150%;
+        margin: 5%;
+    }
 }

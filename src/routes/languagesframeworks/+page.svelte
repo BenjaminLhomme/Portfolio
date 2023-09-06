@@ -1,17 +1,17 @@
 <script>
     let images = [
-      {src: '$asset/ajax.png', alt: 'ajax', title: 'Titre 1'},
-      {src: '../.../asset/github.png', alt: 'github', title: 'Titre 2'},
-      {src: '../.../asset/boostrap.png', alt: 'boostrap', title: 'Titre 3'},
-      {src: '../.../asset/aspnet.png', alt: 'aspnet', title: 'Titre 3'},
-      {src: '../.../asset/c-.png', alt: 'c-', title: 'C++'},
-      {src: '../.../asset/c.png', alt: 'c', title: 'C'},
-      {src: '../../asset/css.png', alt: 'css', title: 'Titre 1'},
-      {src: '../.../asset/html5.png', alt: 'html5', title: 'Titre 2'},
-      {src: '../.../asset/javascript.png', alt: 'javascript', title: 'Titre 3'},
-      {src: '../.../asset/mysql.png', alt: 'mysql', title: 'Titre 3'},
-      {src: '../.../asset/php.png', alt: 'php', title: 'php'},
-      {src: '../.../asset/vb.png', alt: 'vb', title: 'vb'},
+      {src: 'src/asset/ajax.png', alt: 'ajax', title: 'Titre 1'},
+      {src: 'src/asset/github.png', alt: 'github', title: 'Titre 2'},
+      {src: 'src/asset/boostrap.png', alt: 'boostrap', title: 'Titre 3'},
+      {src: 'src/asset/aspnet.png', alt: 'aspnet', title: 'Titre 3'},
+      {src: 'src/asset/c-.png', alt: 'c-', title: 'C++'},
+      {src: 'src/asset/c.png', alt: 'c', title: 'C'},
+      {src: 'src/asset/css.png', alt: 'css', title: 'Titre 1'},
+      {src: 'src/asset/html5.png', alt: 'html5', title: 'Titre 2'},
+      {src: 'src/asset/javascript.png', alt: 'javascript', title: 'Titre 3'},
+      {src: 'src/asset/mysql.png', alt: 'mysql', title: 'Titre 3'},
+      {src: 'src/asset/php.png', alt: 'php', title: 'php'},
+      {src: 'src/asset/vb.png', alt: 'vb', title: 'vb'},
     ];
   
     function shuffle(array) {
@@ -29,7 +29,6 @@
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
   
-        // Et échangez-le avec l'élément actuel.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;

@@ -1,26 +1,17 @@
 <script>
     import { onMount } from 'svelte';
-    import lottie from 'lottie-web';
-    import {Particles} from '$components';
+    import {Particles, LottieComponent} from '$components';
 
-    onMount(() => {
-        // Chargement de l'animation Lottie
-        const container = document.getElementById('lottie-animation-1');
-        if (container) {
-            lottie.loadAnimation({
-                container: container,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: 'https://assets5.lottiefiles.com/packages/lf20_6e0qqtpa.json'
-            });
-        }
-    });
+    let widthContact = "30px";
+    let heightContact = "30px";
+    let heightRobot = "300px";
+    let widthRobot = "300px";
 </script>
 
 <style>
     @import '../style/home.css';
 </style>
+
 
 <Particles />
 <div class="partie-gauche">
@@ -43,7 +34,24 @@
                 son fonctionnement ci besoin, vous aurez juste à me cliquer dessus. 
                 Bonne Visite.</p>
             </div>
-            <div id="lottie-animation-1" class="lottie-container"></div>
+                <LottieComponent src="https://assets5.lottiefiles.com/packages/lf20_6e0qqtpa.json" />
         </div>
+    </div>
+</div>
+
+<div class="lottie-container-contact">
+    <div class="lottie-phone">
+        <LottieComponent  src="src/asset/lottieFilesJson/phone.json" />
+        <p class="lottie-text">Texte à côté de la première animation</p>
+    </div>
+
+    <div class="lottie-mail">
+        <LottieComponent src="src/asset/lottieFilesJson/mail.json" />
+        <p class="lottie-text">Texte à côté de la seconde animation</p>
+    </div>
+
+    <div class="lottie-linkedin">
+        <LottieComponent nameForContact="linkedin" src="src/asset/lottieFilesJson/linkedin.json"/>
+        <p class="lottie-text">Texte à côté de la troisième animation</p>
     </div>
 </div>

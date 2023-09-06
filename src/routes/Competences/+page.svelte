@@ -1,5 +1,9 @@
-<body>
-    <h1>Compétences</h1>
+<script>
+    import {NavBar} from '$components';
+</script>
+
+<body class="bodyCompetences">
+    <NavBar/>
     <div class="allCard">
 
         <div class="card">

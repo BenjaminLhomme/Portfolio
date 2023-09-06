@@ -1,4 +1,4 @@
-body { 
+.bodyCompetences { 
     height: 100vh;
     width: 100%;
     display: flex;
@@ -7,7 +7,6 @@ body {
     justify-content: center;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: aqua;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
